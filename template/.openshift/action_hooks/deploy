@@ -1,0 +1,6 @@
+#!/bin/sh
+
+find "$OPENSHIFT_REPO_DIR"/etc -name '*.erb' | while read f ; do
+  erb < "$f" > "${f%%.erb}"
+done
+
